@@ -1,14 +1,9 @@
 import { Inertia } from '@inertiajs/inertia';
 // @ts-ignore
 import { InertiaLink, Head } from '@inertiajs/inertia-react';
-import classNames from 'classnames';
 import React, { PropsWithChildren, useState, Fragment } from 'react';
 import useRoute from '@/Hooks/useRoute';
 import useTypedPage from '@/Hooks/useTypedPage';
-import JetApplicationMark from '@/Jetstream/ApplicationMark';
-import JetBanner from '@/Jetstream/Banner';
-import JetDropdown from '@/Jetstream/Dropdown';
-import JetDropdownLink from '@/Jetstream/DropdownLink';
 import JetNavLink from '@/Jetstream/NavLink';
 import JetResponsiveNavLink from '@/Jetstream/ResponsiveNavLink';
 import { Team } from '@/types';
@@ -69,11 +64,6 @@ export default function AppLayout({
       current: false,
       active: route().current('profile.show'),
     },
-  ];
-  
-  const userNavigation = [
-    { name: 'Perfil', href: route('profile.show') },
-    { name: 'Cerrar Sesión', href: route('logout') },
   ];
 
   function classNames(...classes: any) {
@@ -216,16 +206,19 @@ export default function AppLayout({
                     </div>
                   </div>
                   <div className="mt-3 px-2 space-y-1">
-                    {userNavigation.map(item => (
-                      <Disclosure.Button
-                        key={item.name}
-                        as="a"
-                        href={item.href}
-                        className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
+                    <Disclosure.Button>
+                      <JetResponsiveNavLink
+                        href={route('profile.show')}
+                        active={route().current('profile.show')}
                       >
-                        {item.name}
-                      </Disclosure.Button>
-                    ))}
+                        Perfil
+                      </JetResponsiveNavLink>
+                    </Disclosure.Button>
+                    <form method="POST" onSubmit={logout}>
+                      <JetResponsiveNavLink as="button">
+                        Cerrar sesión
+                      </JetResponsiveNavLink>
+                    </form>
                   </div>
                 </div>
               </Disclosure.Panel>

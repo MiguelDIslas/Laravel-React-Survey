@@ -6298,13 +6298,6 @@ function AppLayout(_a) {
     current: false,
     active: route().current('profile.show')
   }];
-  var userNavigation = [{
-    name: 'Perfil',
-    href: route('profile.show')
-  }, {
-    name: 'Cerrar Sesión',
-    href: route('logout')
-  }];
 
   function classNames() {
     var classes = [];
@@ -6432,14 +6425,15 @@ function AppLayout(_a) {
       className: "text-sm font-medium leading-none text-gray-400"
     }, user.email))), react_1["default"].createElement("div", {
       className: "mt-3 px-2 space-y-1"
-    }, userNavigation.map(function (item) {
-      return react_1["default"].createElement(react_2.Disclosure.Button, {
-        key: item.name,
-        as: "a",
-        href: item.href,
-        className: "block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
-      }, item.name);
-    })))));
+    }, react_1["default"].createElement(react_2.Disclosure.Button, null, react_1["default"].createElement(ResponsiveNavLink_1["default"], {
+      href: route('profile.show'),
+      active: route().current('profile.show')
+    }, "Perfil")), react_1["default"].createElement("form", {
+      method: "POST",
+      onSubmit: logout
+    }, react_1["default"].createElement(ResponsiveNavLink_1["default"], {
+      as: "button"
+    }, "Cerrar sesi\xF3n"))))));
   }), renderHeader ? react_1["default"].createElement("header", {
     className: "bg-white shadow"
   }, react_1["default"].createElement("div", {
