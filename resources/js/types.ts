@@ -87,3 +87,30 @@ export interface TeamInvitation {
   created_at: DateTime;
   updated_at: DateTime;
 }
+
+export interface Survey {
+  id: number;
+  user_id: number;
+  gender: string;
+  age: string;
+  continent: string;
+  often_play: string;
+  acquire_games: string;
+  price: string;
+  platform: string;
+  company: string;
+  console: string;
+  prefer_play: string;
+  adventure: number;
+  action: number;
+  arcade: number;
+  logic: number;
+  mmorpg: number;
+  rpg: number;
+  simulator: number;
+  sports: number;
+  strategy: number;
+  competitive: number;
+  most_anticipated: string;
+  favorite_game: string;
+}

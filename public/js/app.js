@@ -4686,24 +4686,25 @@ function UpdatePasswordForm() {
 
   return react_1["default"].createElement(FormSection_1["default"], {
     onSubmit: updatePassword,
-    title: 'Update Password',
-    description: 'Ensure your account is using a long, random password to stay secure.',
+    title: 'Actualizar contraseña',
+    description: 'Asegúrate de tener un contraseña extensa para proteger tu cuenta.',
     renderActions: function renderActions() {
       return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement(ActionMessage_1["default"], {
         on: form.recentlySuccessful,
         className: "mr-3"
-      }, "Saved."), react_1["default"].createElement(Button_1["default"], {
+      }, "Guardado."), react_1["default"].createElement(Button_1["default"], {
         className: (0, classnames_1["default"])({
           'opacity-25': form.processing
         }),
         disabled: form.processing
-      }, "Save"));
+      }, "Guardar"));
     }
   }, react_1["default"].createElement("div", {
     className: "col-span-6 sm:col-span-4"
   }, react_1["default"].createElement(Label_1["default"], {
-    htmlFor: "current_password"
-  }, "Current Password"), react_1["default"].createElement(Input_1["default"], {
+    htmlFor: "current_password",
+    value: "Contrase\xF1a actual"
+  }), react_1["default"].createElement(Input_1["default"], {
     id: "current_password",
     type: "password",
     className: "mt-1 block w-full",
@@ -4719,8 +4720,9 @@ function UpdatePasswordForm() {
   })), react_1["default"].createElement("div", {
     className: "col-span-6 sm:col-span-4"
   }, react_1["default"].createElement(Label_1["default"], {
-    htmlFor: "password"
-  }, "New Password"), react_1["default"].createElement(Input_1["default"], {
+    htmlFor: "password",
+    value: "Nueva contrase\xF1a"
+  }), react_1["default"].createElement(Input_1["default"], {
     id: "password",
     type: "password",
     className: "mt-1 block w-full",
@@ -4736,8 +4738,9 @@ function UpdatePasswordForm() {
   })), react_1["default"].createElement("div", {
     className: "col-span-6 sm:col-span-4"
   }, react_1["default"].createElement(Label_1["default"], {
-    htmlFor: "password_confirmation"
-  }, "Confirm Password"), react_1["default"].createElement(Input_1["default"], {
+    htmlFor: "password_confirmation",
+    value: "Confirmar contrase\xF1a"
+  }), react_1["default"].createElement(Input_1["default"], {
     id: "password_confirmation",
     type: "password",
     className: "mt-1 block w-full",
@@ -4908,18 +4911,18 @@ function UpdateProfileInformationForm(_a) {
 
   return react_1["default"].createElement(FormSection_1["default"], {
     onSubmit: updateProfileInformation,
-    title: 'Profile Information',
-    description: "Update your account's profile information and email address.",
+    title: 'Información del perfil',
+    description: "Este formulario permite actualizar el nombre y correo electr\xF3nico del usuario.",
     renderActions: function renderActions() {
       return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement(ActionMessage_1["default"], {
         on: form.recentlySuccessful,
         className: "mr-3"
-      }, "Saved."), react_1["default"].createElement(Button_1["default"], {
+      }, "Guardado."), react_1["default"].createElement(Button_1["default"], {
         className: (0, classnames_1["default"])({
           'opacity-25': form.processing
         }),
         disabled: form.processing
-      }, "Save"));
+      }, "Guardar"));
     }
   }, page.props.jetstream.managesProfilePhotos ? react_1["default"].createElement("div", {
     className: "col-span-6 sm:col-span-4"
@@ -4964,7 +4967,7 @@ function UpdateProfileInformationForm(_a) {
     className: "col-span-6 sm:col-span-4"
   }, react_1["default"].createElement(Label_1["default"], {
     htmlFor: "name",
-    value: "Name"
+    value: "Nombre"
   }), react_1["default"].createElement(Input_1["default"], {
     id: "name",
     type: "text",
@@ -4981,7 +4984,7 @@ function UpdateProfileInformationForm(_a) {
     className: "col-span-6 sm:col-span-4"
   }, react_1["default"].createElement(Label_1["default"], {
     htmlFor: "email",
-    value: "Email"
+    value: "Correo Electr\xF3nico"
   }), react_1["default"].createElement(Input_1["default"], {
     id: "email",
     type: "email",
@@ -5131,50 +5134,6 @@ function JetActionSection(_a) {
 }
 
 exports["default"] = JetActionSection;
-
-/***/ }),
-
-/***/ "./resources/js/Jetstream/ApplicationLogo.tsx":
-/*!****************************************************!*\
-  !*** ./resources/js/Jetstream/ApplicationLogo.tsx ***!
-  \****************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
-};
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-
-var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-function JetApplicationLogo(_a) {
-  var className = _a.className;
-  return react_1["default"].createElement("svg", {
-    viewBox: "0 0 317 48",
-    fill: "none",
-    xmlns: "http://www.w3.org/2000/svg",
-    className: className
-  }, react_1["default"].createElement("path", {
-    d: "M74.09 30.04V13h-4.14v21H82.1v-3.96h-8.01zM95.379 19v1.77c-1.08-1.35-2.7-2.19-4.89-2.19-3.99 0-7.29 3.45-7.29 7.92s3.3 7.92 7.29 7.92c2.19 0 3.81-.84 4.89-2.19V34h3.87V19h-3.87zm-4.17 11.73c-2.37 0-4.14-1.71-4.14-4.23 0-2.52 1.77-4.23 4.14-4.23 2.4 0 4.17 1.71 4.17 4.23 0 2.52-1.77 4.23-4.17 4.23zM106.628 21.58V19h-3.87v15h3.87v-7.17c0-3.15 2.55-4.05 4.56-3.81V18.7c-1.89 0-3.78.84-4.56 2.88zM124.295 19v1.77c-1.08-1.35-2.7-2.19-4.89-2.19-3.99 0-7.29 3.45-7.29 7.92s3.3 7.92 7.29 7.92c2.19 0 3.81-.84 4.89-2.19V34h3.87V19h-3.87zm-4.17 11.73c-2.37 0-4.14-1.71-4.14-4.23 0-2.52 1.77-4.23 4.14-4.23 2.4 0 4.17 1.71 4.17 4.23 0 2.52-1.77 4.23-4.17 4.23zM141.544 19l-3.66 10.5-3.63-10.5h-4.26l5.7 15h4.41l5.7-15h-4.26zM150.354 28.09h11.31c.09-.51.15-1.02.15-1.59 0-4.41-3.15-7.92-7.59-7.92-4.71 0-7.92 3.45-7.92 7.92s3.18 7.92 8.22 7.92c2.88 0 5.13-1.17 6.54-3.21l-3.12-1.8c-.66.87-1.86 1.5-3.36 1.5-2.04 0-3.69-.84-4.23-2.82zm-.06-3c.45-1.92 1.86-3.03 3.93-3.03 1.62 0 3.24.87 3.72 3.03h-7.65zM164.516 34h3.87V12.1h-3.87V34zM185.248 34.36c3.69 0 6.9-2.01 6.9-6.3V13h-2.1v15.06c0 3.03-2.07 4.26-4.8 4.26-2.19 0-3.93-.78-4.62-2.61l-1.77 1.05c1.05 2.43 3.57 3.6 6.39 3.6zM203.124 18.64c-4.65 0-7.83 3.45-7.83 7.86 0 4.53 3.24 7.86 7.98 7.86 3.03 0 5.34-1.41 6.6-3.45l-1.74-1.02c-.81 1.44-2.46 2.55-4.83 2.55-3.18 0-5.55-1.89-5.97-4.95h13.17c.03-.3.06-.63.06-.93 0-4.11-2.85-7.92-7.44-7.92zm0 1.92c2.58 0 4.98 1.71 5.4 5.01h-11.19c.39-2.94 2.64-5.01 5.79-5.01zM221.224 20.92V19h-4.32v-4.2l-1.98.6V19h-3.15v1.92h3.15v9.09c0 3.6 2.25 4.59 6.3 3.99v-1.74c-2.91.12-4.32.33-4.32-2.25v-9.09h4.32zM225.176 22.93c0-1.62 1.59-2.37 3.15-2.37 1.44 0 2.97.57 3.6 2.1l1.65-.96c-.87-1.86-2.79-3.06-5.25-3.06-3 0-5.13 1.89-5.13 4.29 0 5.52 8.76 3.39 8.76 7.11 0 1.77-1.68 2.4-3.45 2.4-2.01 0-3.57-.99-4.11-2.52l-1.68.99c.75 1.92 2.79 3.45 5.79 3.45 3.21 0 5.43-1.77 5.43-4.32 0-5.52-8.76-3.39-8.76-7.11zM244.603 20.92V19h-4.32v-4.2l-1.98.6V19h-3.15v1.92h3.15v9.09c0 3.6 2.25 4.59 6.3 3.99v-1.74c-2.91.12-4.32.33-4.32-2.25v-9.09h4.32zM249.883 21.49V19h-1.98v15h1.98v-8.34c0-3.72 2.34-4.98 4.74-4.98v-1.92c-1.92 0-3.69.63-4.74 2.73zM263.358 18.64c-4.65 0-7.83 3.45-7.83 7.86 0 4.53 3.24 7.86 7.98 7.86 3.03 0 5.34-1.41 6.6-3.45l-1.74-1.02c-.81 1.44-2.46 2.55-4.83 2.55-3.18 0-5.55-1.89-5.97-4.95h13.17c.03-.3.06-.63.06-.93 0-4.11-2.85-7.92-7.44-7.92zm0 1.92c2.58 0 4.98 1.71 5.4 5.01h-11.19c.39-2.94 2.64-5.01 5.79-5.01zM286.848 19v2.94c-1.26-2.01-3.39-3.3-6.06-3.3-4.23 0-7.74 3.42-7.74 7.86s3.51 7.86 7.74 7.86c2.67 0 4.8-1.29 6.06-3.3V34h1.98V19h-1.98zm-5.91 13.44c-3.33 0-5.91-2.61-5.91-5.94 0-3.33 2.58-5.94 5.91-5.94s5.91 2.61 5.91 5.94c0 3.33-2.58 5.94-5.91 5.94zM309.01 18.64c-1.92 0-3.75.87-4.86 2.73-.84-1.74-2.46-2.73-4.56-2.73-1.8 0-3.42.72-4.59 2.55V19h-1.98v15H295v-8.31c0-3.72 2.16-5.13 4.32-5.13 2.13 0 3.51 1.41 3.51 4.08V34h1.98v-8.31c0-3.72 1.86-5.13 4.17-5.13 2.13 0 3.66 1.41 3.66 4.08V34h1.98v-9.36c0-3.75-2.31-6-5.61-6z",
-    fill: "#000"
-  }), react_1["default"].createElement("path", {
-    d: "M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z",
-    fill: "#6875F5"
-  }), react_1["default"].createElement("path", {
-    d: "M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z",
-    fill: "#6875F5"
-  }));
-}
-
-exports["default"] = JetApplicationLogo;
 
 /***/ }),
 
@@ -5662,7 +5621,9 @@ function JetFormSection(_a) {
     className: (0, classnames_1["default"])('px-4 py-5 bg-white sm:p-6 shadow', hasActions ? 'sm:rounded-tl-md sm:rounded-tr-md' : 'sm:rounded-md')
   }, react_1["default"].createElement("div", {
     className: "grid grid-cols-6 gap-6"
-  }, children)))));
+  }, children)), hasActions && react_1["default"].createElement("div", {
+    className: "flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6 shadow sm:rounded-bl-md sm:rounded-br-md"
+  }, renderActions === null || renderActions === void 0 ? void 0 : renderActions()))));
 }
 
 exports["default"] = JetFormSection;
@@ -6020,7 +5981,7 @@ function JetResponsiveNavLink(_a) {
       children = _a.children,
       props = __rest(_a, ["active", "href", "children"]);
 
-  var classes = active ? 'block pl-3 pr-4 py-2 border-l-4 border-indigo-400 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition' : 'block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition';
+  var classes = active ? 'block pl-3 pr-4 py-2 border-l-4 border-sky-400 text-base font-medium text-sky-700 bg-sky-50 focus:outline-none focus:text-sky-800 focus:bg-sky-100 focus:border-sky-700 transition' : 'block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition';
   return react_1["default"].createElement("div", null, 'as' in props && props.as === 'button' ? react_1["default"].createElement("button", {
     className: (0, classnames_1["default"])('w-full text-left', classes)
   }, children) : react_1["default"].createElement(inertia_react_1.InertiaLink, {
@@ -6222,163 +6183,6 @@ exports["default"] = JetValidationErrors;
 
 /***/ }),
 
-/***/ "./resources/js/Jetstream/Welcome.tsx":
-/*!********************************************!*\
-  !*** ./resources/js/Jetstream/Welcome.tsx ***!
-  \********************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
-};
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-
-var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var ApplicationLogo_1 = __importDefault(__webpack_require__(/*! @/Jetstream/ApplicationLogo */ "./resources/js/Jetstream/ApplicationLogo.tsx"));
-
-function Welcome() {
-  return react_1["default"].createElement("div", null, react_1["default"].createElement("div", {
-    className: "p-6 sm:px-20 bg-white border-b border-gray-200"
-  }, react_1["default"].createElement("div", null, react_1["default"].createElement(ApplicationLogo_1["default"], {
-    className: "block h-12 w-auto"
-  })), react_1["default"].createElement("div", {
-    className: "mt-8 text-2xl"
-  }, "Welcome to your Jetstream application!"), react_1["default"].createElement("div", {
-    className: "mt-6 text-gray-500"
-  }, "Laravel Jetstream provides a beautiful, robust starting point for your next Laravel application. Laravel is designed to help you build your application using a development environment that is simple, powerful, and enjoyable. We believe you should love expressing your creativity through programming, so we have spent time carefully crafting the Laravel ecosystem to be a breath of fresh air. We hope you love it.")), react_1["default"].createElement("div", {
-    className: "bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2"
-  }, react_1["default"].createElement("div", {
-    className: "p-6"
-  }, react_1["default"].createElement("div", {
-    className: "flex items-center"
-  }, react_1["default"].createElement("svg", {
-    fill: "none",
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: "2",
-    viewBox: "0 0 24 24",
-    className: "w-8 h-8 text-gray-400"
-  }, react_1["default"].createElement("path", {
-    d: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-  })), react_1["default"].createElement("div", {
-    className: "ml-4 text-lg text-gray-600 leading-7 font-semibold"
-  }, react_1["default"].createElement("a", {
-    href: "https://laravel.com/docs"
-  }, "Documentation"))), react_1["default"].createElement("div", {
-    className: "ml-12"
-  }, react_1["default"].createElement("div", {
-    className: "mt-2 text-sm text-gray-500"
-  }, "Laravel has wonderful documentation covering every aspect of the framework. Whether you're new to the framework or have previous experience, we recommend reading all of the documentation from beginning to end."), react_1["default"].createElement("a", {
-    href: "https://laravel.com/docs"
-  }, react_1["default"].createElement("div", {
-    className: "mt-3 flex items-center text-sm font-semibold text-indigo-700"
-  }, react_1["default"].createElement("div", null, "Explore the documentation"), react_1["default"].createElement("div", {
-    className: "ml-1 text-indigo-500"
-  }, react_1["default"].createElement("svg", {
-    viewBox: "0 0 20 20",
-    fill: "currentColor",
-    className: "w-4 h-4"
-  }, react_1["default"].createElement("path", {
-    fillRule: "evenodd",
-    d: "M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z",
-    clipRule: "evenodd"
-  }))))))), react_1["default"].createElement("div", {
-    className: "p-6 border-t border-gray-200 md:border-t-0 md:border-l"
-  }, react_1["default"].createElement("div", {
-    className: "flex items-center"
-  }, react_1["default"].createElement("svg", {
-    fill: "none",
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: "2",
-    viewBox: "0 0 24 24",
-    className: "w-8 h-8 text-gray-400"
-  }, react_1["default"].createElement("path", {
-    d: "M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-  }), react_1["default"].createElement("path", {
-    d: "M15 13a3 3 0 11-6 0 3 3 0 016 0z"
-  })), react_1["default"].createElement("div", {
-    className: "ml-4 text-lg text-gray-600 leading-7 font-semibold"
-  }, react_1["default"].createElement("a", {
-    href: "https://laracasts.com"
-  }, "Laracasts"))), react_1["default"].createElement("div", {
-    className: "ml-12"
-  }, react_1["default"].createElement("div", {
-    className: "mt-2 text-sm text-gray-500"
-  }, "Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process."), react_1["default"].createElement("a", {
-    href: "https://laracasts.com"
-  }, react_1["default"].createElement("div", {
-    className: "mt-3 flex items-center text-sm font-semibold text-indigo-700"
-  }, react_1["default"].createElement("div", null, "Start watching Laracasts"), react_1["default"].createElement("div", {
-    className: "ml-1 text-indigo-500"
-  }, react_1["default"].createElement("svg", {
-    viewBox: "0 0 20 20",
-    fill: "currentColor",
-    className: "w-4 h-4"
-  }, react_1["default"].createElement("path", {
-    fillRule: "evenodd",
-    d: "M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z",
-    clipRule: "evenodd"
-  }))))))), react_1["default"].createElement("div", {
-    className: "p-6 border-t border-gray-200"
-  }, react_1["default"].createElement("div", {
-    className: "flex items-center"
-  }, react_1["default"].createElement("svg", {
-    fill: "none",
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: "2",
-    viewBox: "0 0 24 24",
-    className: "w-8 h-8 text-gray-400"
-  }, react_1["default"].createElement("path", {
-    d: "M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-  })), react_1["default"].createElement("div", {
-    className: "ml-4 text-lg text-gray-600 leading-7 font-semibold"
-  }, react_1["default"].createElement("a", {
-    href: "https://tailwindcss.com/"
-  }, "Tailwind"))), react_1["default"].createElement("div", {
-    className: "ml-12"
-  }, react_1["default"].createElement("div", {
-    className: "mt-2 text-sm text-gray-500"
-  }, "Laravel Jetstream is built with Tailwind, an amazing utility first CSS framework that doesn't get in your way. You'll be amazed how easily you can build and maintain fresh, modern designs with this wonderful framework at your fingertips."))), react_1["default"].createElement("div", {
-    className: "p-6 border-t border-gray-200 md:border-l"
-  }, react_1["default"].createElement("div", {
-    className: "flex items-center"
-  }, react_1["default"].createElement("svg", {
-    fill: "none",
-    stroke: "currentColor",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeWidth: "2",
-    viewBox: "0 0 24 24",
-    className: "w-8 h-8 text-gray-400"
-  }, react_1["default"].createElement("path", {
-    d: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-  })), react_1["default"].createElement("div", {
-    className: "ml-4 text-lg text-gray-600 leading-7 font-semibold"
-  }, "Authentication")), react_1["default"].createElement("div", {
-    className: "ml-12"
-  }, react_1["default"].createElement("div", {
-    className: "mt-2 text-sm text-gray-500"
-  }, "Authentication and registration views are included with Laravel Jetstream, as well as support for user email verification and resetting forgotten passwords. So, you're free to get started what matters most: building your application.")))));
-}
-
-exports["default"] = Welcome;
-
-/***/ }),
-
 /***/ "./resources/js/Layouts/AppLayout.tsx":
 /*!********************************************!*\
   !*** ./resources/js/Layouts/AppLayout.tsx ***!
@@ -6483,9 +6287,11 @@ function AppLayout(_a) {
     active: route().current('dashboard')
   }, {
     name: 'Encuesta',
-    href: '#',
+    href: route('survey.verified', {
+      user: page.props.user.id
+    }),
     current: false,
-    active: route().current('dashboard')
+    active: route().current('survey.create') || route().current('survey.edit')
   }, {
     name: 'Perfil',
     href: route('profile.show'),
@@ -6534,10 +6340,8 @@ function AppLayout(_a) {
       className: "flex-shrink-0"
     }, react_1["default"].createElement(inertia_react_1.InertiaLink, {
       href: route('dashboard')
-    }, react_1["default"].createElement("img", {
-      className: "h-8 w-8",
-      src: "https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg",
-      alt: "Workflow"
+    }, react_1["default"].createElement("i", {
+      className: "fa-brands fa-laravel text-white text-4xl"
     }))), react_1["default"].createElement("div", {
       className: "hidden md:block"
     }, react_1["default"].createElement("div", {
@@ -6579,14 +6383,14 @@ function AppLayout(_a) {
     }, react_1["default"].createElement(ResponsiveNavLink_1["default"], {
       href: route('profile.show'),
       active: route().current('profile.show')
-    }, "Profile")), react_1["default"].createElement(react_2.Menu.Item, {
+    }, "Perfil")), react_1["default"].createElement(react_2.Menu.Item, {
       key: "2"
     }, react_1["default"].createElement("form", {
       method: "POST",
       onSubmit: logout
     }, react_1["default"].createElement(ResponsiveNavLink_1["default"], {
       as: "button"
-    }, "Log Out")))))))), react_1["default"].createElement("div", {
+    }, "Cerrar sesi\xF3n")))))))), react_1["default"].createElement("div", {
       className: "-mr-2 flex md:hidden"
     }, react_1["default"].createElement(react_2.Disclosure.Button, {
       className: "bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
@@ -6636,15 +6440,17 @@ function AppLayout(_a) {
         className: "block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
       }, item.name);
     })))));
-  }), react_1["default"].createElement("header", {
+  }), renderHeader ? react_1["default"].createElement("header", {
     className: "bg-white shadow"
   }, react_1["default"].createElement("div", {
     className: "max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8"
-  }, react_1["default"].createElement("h1", {
-    className: "text-3xl font-bold text-gray-900"
-  }, "Dashboard"))), react_1["default"].createElement("main", null, react_1["default"].createElement("div", {
-    className: "max-w-7xl mx-auto py-6 sm:px-6 lg:px-8"
-  }, children))));
+  }, renderHeader())) : null, react_1["default"].createElement("main", null, react_1["default"].createElement("div", {
+    className: "max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 min-h-screen flex flex-col justify-center items-center"
+  }, children)), react_1["default"].createElement("footer", null, react_1["default"].createElement("div", {
+    className: "py-5 bg-gray-800"
+  }, react_1["default"].createElement("div", {
+    className: "text-center text-lg text-white bg-gray-800"
+  }, react_1["default"].createElement("span", null, "@2022"))))));
 }
 
 exports["default"] = AppLayout;
@@ -7514,25 +7320,24 @@ Object.defineProperty(exports, "__esModule", ({
 
 var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var Welcome_1 = __importDefault(__webpack_require__(/*! @/Jetstream/Welcome */ "./resources/js/Jetstream/Welcome.tsx"));
-
 var AppLayout_1 = __importDefault(__webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.tsx"));
 
+var useRoute_1 = __importDefault(__webpack_require__(/*! @/Hooks/useRoute */ "./resources/js/Hooks/useRoute.ts"));
+
+var Message_1 = __importDefault(__webpack_require__(/*! @/components/Message */ "./resources/js/components/Message/index.tsx"));
+
 function Dashboard() {
+  var route = (0, useRoute_1["default"])();
   return react_1["default"].createElement(AppLayout_1["default"], {
-    title: "Dashboard",
+    title: "Tablero",
     renderHeader: function renderHeader() {
       return react_1["default"].createElement("h2", {
         className: "font-semibold text-xl text-gray-800 leading-tight"
-      }, "Dashboard");
+      }, "Tablero");
     }
-  }, react_1["default"].createElement("div", {
-    className: "py-12"
-  }, react_1["default"].createElement("div", {
-    className: "max-w-7xl mx-auto sm:px-6 lg:px-8"
-  }, react_1["default"].createElement("div", {
-    className: "bg-white overflow-hidden shadow-xl sm:rounded-lg"
-  }, react_1["default"].createElement(Welcome_1["default"], null)))));
+  }, react_1["default"].createElement(Message_1["default"], {
+    message: "Este es un peque\xF1o proyecto de encuesta desarrollado con Laravel, React, Inertia, Tailwind\n              y Jetstream. En un futuro cambio se agregar\xE1 un perfil de administrador para poder observar gr\xE1ficas de las encuestas y nuevas encuestas! "
+  }));
 }
 
 exports["default"] = Dashboard;
@@ -7626,7 +7431,7 @@ function Show(_a) {
     renderHeader: function renderHeader() {
       return react_1["default"].createElement("h2", {
         className: "font-semibold text-xl text-gray-800 leading-tight"
-      }, "Profile");
+      }, "Perfil");
     }
   }, react_1["default"].createElement("div", null, react_1["default"].createElement("div", {
     className: "max-w-7xl mx-auto py-10 sm:px-6 lg:px-8"
@@ -7638,6 +7443,772 @@ function Show(_a) {
 }
 
 exports["default"] = Show;
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Survey/Create/index.tsx":
+/*!****************************************************!*\
+  !*** ./resources/js/Pages/Survey/Create/index.tsx ***!
+  \****************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __assign = this && this.__assign || function () {
+  __assign = Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+
+      for (var p in s) {
+        if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+      }
+    }
+
+    return t;
+  };
+
+  return __assign.apply(this, arguments);
+};
+
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var inertia_1 = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+
+var useRoute_1 = __importDefault(__webpack_require__(/*! @/Hooks/useRoute */ "./resources/js/Hooks/useRoute.ts"));
+
+var Checkbox_1 = __importDefault(__webpack_require__(/*! @/components/Checkbox */ "./resources/js/components/Checkbox/index.tsx"));
+
+var Select_1 = __importDefault(__webpack_require__(/*! @/components/Select */ "./resources/js/components/Select/index.tsx"));
+
+var AppLayout_1 = __importDefault(__webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.tsx"));
+
+var useTypedPage_1 = __importDefault(__webpack_require__(/*! @/Hooks/useTypedPage */ "./resources/js/Hooks/useTypedPage.ts"));
+
+var Spinner_1 = __importDefault(__webpack_require__(/*! @/components/Spinner */ "./resources/js/components/Spinner/index.tsx"));
+
+var SurveyForm = function SurveyForm() {
+  var route = (0, useRoute_1["default"])();
+  var page = (0, useTypedPage_1["default"])();
+
+  var _a = (0, react_1.useState)({
+    user_id: page.props.user.id,
+    gender: '',
+    age: '',
+    continent: '',
+    often_play: '',
+    acquire_games: '',
+    price: '',
+    platform: '',
+    company: '',
+    console: '',
+    prefer_play: '',
+    adventure: 0,
+    action: 0,
+    arcade: 0,
+    logic: 0,
+    mmorpg: 0,
+    rpg: 0,
+    simulator: 0,
+    sports: 0,
+    strategy: 0,
+    competitive: 0,
+    most_anticipated: '',
+    favorite_game: ''
+  }),
+      values = _a[0],
+      setValues = _a[1];
+
+  var _b = (0, react_1.useState)(false),
+      showLoader = _b[0],
+      setShowLoader = _b[1];
+
+  function handleChange(e) {
+    var key = e.target.id;
+    var value;
+
+    if (e.target.type == 'checkbox') {
+      value = e.target.checked ? 1 : 0;
+    } else {
+      value = e.target.value;
+    }
+
+    setValues(function (values) {
+      var _a;
+
+      return __assign(__assign({}, values), (_a = {}, _a[key] = value, _a));
+    });
+  }
+
+  function handleChangeSelect(value) {
+    var key = value.target.id;
+    var val = value.target.value;
+    setValues(function (values) {
+      var _a;
+
+      return __assign(__assign({}, values), (_a = {}, _a[key] = val, _a));
+    });
+  }
+
+  var handleSubmit = function handleSubmit(event) {
+    event.preventDefault();
+    inertia_1.Inertia.post(route('survey.store'), values, {
+      onStart: function onStart() {
+        setShowLoader(true);
+      },
+      onFinish: function onFinish() {
+        setShowLoader(false);
+      }
+    });
+  };
+
+  return react_1["default"].createElement(AppLayout_1["default"], {
+    title: "Encuesta",
+    renderHeader: function renderHeader() {
+      return react_1["default"].createElement("h2", {
+        className: "font-semibold text-xl text-gray-800 leading-tight"
+      }, "Encuesta");
+    }
+  }, react_1["default"].createElement("h2", {
+    className: "font-bold leading-tight text-4xl mt-0 mb-2 text-sky-600"
+  }, "Gracias por participar"), react_1["default"].createElement("div", {
+    className: "sm:mt-0"
+  }, react_1["default"].createElement("div", {
+    className: "mt-5 md:mt-0 md:col-span-2"
+  }, react_1["default"].createElement("form", {
+    onSubmit: handleSubmit
+  }, react_1["default"].createElement("div", {
+    className: "shadow overflow-hidden sm:rounded-md"
+  }, react_1["default"].createElement("div", {
+    className: "px-4 py-5 bg-white sm:p-6"
+  }, react_1["default"].createElement("div", {
+    className: "grid grid-cols-6 gap-6"
+  }, react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    id: "gender",
+    label: "Indica tu g\xE9nero",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Femenino"), react_1["default"].createElement("option", null, "Masculino"), react_1["default"].createElement("option", null, "No binario"), react_1["default"].createElement("option", null, "Transg\xE9nero"), react_1["default"].createElement("option", null, "Intersexualidad"), react_1["default"].createElement("option", null, "Prefiero no decirlo"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    id: "age",
+    label: "Indica tu edad",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Menor 15 a\xF1os"), react_1["default"].createElement("option", null, "15-20 a\xF1os"), react_1["default"].createElement("option", null, "20-25 a\xF1os"), react_1["default"].createElement("option", null, "M\xE1s de 25 a\xF1os"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    id: "continent",
+    label: "\xBFD\xF3nde resides?",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Europa"), react_1["default"].createElement("option", null, "\xC1frica"), react_1["default"].createElement("option", null, "Am\xE9rica"), react_1["default"].createElement("option", null, "Asia"), react_1["default"].createElement("option", null, "Ocean\xEDa"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    id: "often_play",
+    label: "\xBFQu\xE9 tan seguido juegas videojuegos?",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Diario"), react_1["default"].createElement("option", null, "2-3 veces en la semana"), react_1["default"].createElement("option", null, "1 vez en la semana"), react_1["default"].createElement("option", null, "Nunca"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    id: "acquire_games",
+    label: "\xBFC\xF3mo prefieres adquirir tus juegos?",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Descargas"), react_1["default"].createElement("option", null, "Adquirir nuevo"), react_1["default"].createElement("option", null, "Adquirir seminuevo"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    id: "price",
+    label: "\xBFCu\xE1nto gastas al a\xF1o en juegos? (D\xF3lares)",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "0-20 d\xF3lares"), react_1["default"].createElement("option", null, "20-50 d\xF3lares"), react_1["default"].createElement("option", null, "50-100 d\xF3lares"), react_1["default"].createElement("option", null, "M\xE1s 100 d\xF3lares"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    id: "platform",
+    label: "\xBFEn qu\xE9 plataforma juegas m\xE1s?",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Consola"), react_1["default"].createElement("option", null, "M\xF3vil"), react_1["default"].createElement("option", null, "PC"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    id: "company",
+    label: "Compa\xF1\xEDa preferente",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Sony"), react_1["default"].createElement("option", null, "Microsoft"), react_1["default"].createElement("option", null, "Nintendo"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    id: "console",
+    label: "Consola preferida",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Xbox Series X"), react_1["default"].createElement("option", null, "PlayStation 5"), react_1["default"].createElement("option", null, "Nintendo Switch"), react_1["default"].createElement("option", null, "PlayStation 4"), react_1["default"].createElement("option", null, "Xbox One"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    id: "prefer_play",
+    label: "\xBFC\xF3mo prefieres jugar?",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Solo"), react_1["default"].createElement("option", null, "Con personas"));
+    }
+  }), react_1["default"].createElement("label", {
+    className: "col-span-6 block text-sm font-medium text-gray-700"
+  }, "\xBFQu\xE9 tipo de g\xE9neros juegas?"), react_1["default"].createElement("div", {
+    className: "col-span-6 grid grid-cols-5 gap-5"
+  }, react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.adventure,
+    id: "adventure",
+    title: "Aventura"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.action,
+    id: "action",
+    title: "Acci\xF3n"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.arcade,
+    id: "arcade",
+    title: "Arcade"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.logic,
+    id: "logic",
+    title: "L\xF3gica"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.mmorpg,
+    id: "mmorpg",
+    title: "MMORPG"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.rpg,
+    id: "rpg",
+    title: "RPG"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.simulator,
+    id: "simulator",
+    title: "Simuladores"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.sports,
+    id: "sports",
+    title: "Deportes"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.strategy,
+    id: "strategy",
+    title: "Estrategia"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.competitive,
+    id: "competitive",
+    title: "Competitivos"
+  })), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    id: "most_anticipated",
+    label: "Juego que m\xE1s esperas para el 2022",
+    span: false,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Elden Ring"), react_1["default"].createElement("option", null, "Rainbow Six: Extraction"), react_1["default"].createElement("option", null, "Pokemon Legends: Arceus"), react_1["default"].createElement("option", null, "Dying Light 2: Stay Human"), react_1["default"].createElement("option", null, "Horizon Forbidden West"), react_1["default"].createElement("option", null, "Gran Turismo 7"), react_1["default"].createElement("option", null, "Forspoken"), react_1["default"].createElement("option", null, "The Day Before"), react_1["default"].createElement("option", null, "Bayonetta 3"), react_1["default"].createElement("option", null, "Ghostwire: Tokyo"), react_1["default"].createElement("option", null, "Kirby and the Forgotten Land"), react_1["default"].createElement("option", null, "Gotham Knights"));
+    }
+  }), react_1["default"].createElement("div", {
+    className: "col-span-6"
+  }, react_1["default"].createElement("label", {
+    htmlFor: "favorite_game",
+    className: "block text-sm font-medium text-gray-700"
+  }, "Videojuego favorito"), react_1["default"].createElement("input", {
+    onChange: handleChange,
+    type: "text",
+    name: "favorite_game",
+    id: "favorite_game",
+    className: "mt-1 focus:ring-sky-500 focus:border-sky-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+  })))), react_1["default"].createElement("div", {
+    className: "px-4 py-3 bg-gray-50 text-right sm:px-6"
+  }, react_1["default"].createElement("button", {
+    disabled: showLoader,
+    type: "submit",
+    className: "inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
+  }, "Guardar"))))), showLoader && react_1["default"].createElement(Spinner_1["default"], null)), react_1["default"].createElement("div", {
+    className: "hidden sm:block",
+    "aria-hidden": "true"
+  }, react_1["default"].createElement("div", {
+    className: "py-5"
+  }, react_1["default"].createElement("div", {
+    className: "border-t border-gray-200"
+  }))));
+};
+
+exports["default"] = SurveyForm;
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Survey/Edit/index.tsx":
+/*!**************************************************!*\
+  !*** ./resources/js/Pages/Survey/Edit/index.tsx ***!
+  \**************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __assign = this && this.__assign || function () {
+  __assign = Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+
+      for (var p in s) {
+        if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+      }
+    }
+
+    return t;
+  };
+
+  return __assign.apply(this, arguments);
+};
+
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var inertia_1 = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+
+var useRoute_1 = __importDefault(__webpack_require__(/*! @/Hooks/useRoute */ "./resources/js/Hooks/useRoute.ts"));
+
+var Checkbox_1 = __importDefault(__webpack_require__(/*! @/components/Checkbox */ "./resources/js/components/Checkbox/index.tsx"));
+
+var Select_1 = __importDefault(__webpack_require__(/*! @/components/Select */ "./resources/js/components/Select/index.tsx"));
+
+var AppLayout_1 = __importDefault(__webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.tsx"));
+
+var useTypedPage_1 = __importDefault(__webpack_require__(/*! @/Hooks/useTypedPage */ "./resources/js/Hooks/useTypedPage.ts"));
+
+var Spinner_1 = __importDefault(__webpack_require__(/*! @/components/Spinner */ "./resources/js/components/Spinner/index.tsx"));
+
+var SurveyFormEdit = function SurveyFormEdit(_a) {
+  var survey = _a.survey;
+  var route = (0, useRoute_1["default"])();
+  var page = (0, useTypedPage_1["default"])();
+
+  var _b = (0, react_1.useState)({
+    id: survey.id,
+    user_id: page.props.user.id,
+    gender: survey.gender,
+    age: survey.age,
+    continent: survey.continent,
+    often_play: survey.often_play,
+    acquire_games: survey.acquire_games,
+    price: survey.price,
+    platform: survey.platform,
+    company: survey.company,
+    console: survey.console,
+    prefer_play: survey.prefer_play,
+    adventure: survey.adventure,
+    action: survey.action,
+    arcade: survey.arcade,
+    logic: survey.logic,
+    mmorpg: survey.mmorpg,
+    rpg: survey.rpg,
+    simulator: survey.simulator,
+    sports: survey.sports,
+    strategy: survey.strategy,
+    competitive: survey.competitive,
+    most_anticipated: survey.most_anticipated,
+    favorite_game: survey.favorite_game
+  }),
+      values = _b[0],
+      setValues = _b[1];
+
+  var _c = (0, react_1.useState)(false),
+      showLoader = _c[0],
+      setShowLoader = _c[1];
+
+  function handleChange(e) {
+    var key = e.target.id;
+    var value;
+
+    if (e.target.type == 'checkbox') {
+      value = e.target.checked ? 1 : 0;
+    } else {
+      value = e.target.value;
+    }
+
+    setValues(function (values) {
+      var _a;
+
+      return __assign(__assign({}, values), (_a = {}, _a[key] = value, _a));
+    });
+  }
+
+  function handleChangeSelect(value) {
+    var key = value.target.id;
+    var val = value.target.value;
+    setValues(function (values) {
+      var _a;
+
+      return __assign(__assign({}, values), (_a = {}, _a[key] = val, _a));
+    });
+  }
+
+  var handleSubmit = function handleSubmit(event) {
+    event.preventDefault();
+    inertia_1.Inertia.put(route('survey.update', values), values, {
+      onStart: function onStart() {
+        setShowLoader(true);
+      },
+      onFinish: function onFinish() {
+        setShowLoader(false);
+      }
+    });
+  };
+
+  return react_1["default"].createElement(AppLayout_1["default"], {
+    title: "Encuesta",
+    renderHeader: function renderHeader() {
+      return react_1["default"].createElement("h2", {
+        className: "font-semibold text-xl text-gray-800 leading-tight"
+      }, "Encuesta");
+    }
+  }, react_1["default"].createElement("h2", {
+    className: "font-bold leading-tight text-4xl mt-0 mb-2 text-sky-600"
+  }, "Gracias por participar"), react_1["default"].createElement("div", {
+    className: "sm:mt-0"
+  }, react_1["default"].createElement("div", {
+    className: "mt-5 md:mt-0 md:col-span-2"
+  }, react_1["default"].createElement("form", {
+    onSubmit: handleSubmit
+  }, react_1["default"].createElement("div", {
+    className: "shadow overflow-hidden sm:rounded-md"
+  }, react_1["default"].createElement("div", {
+    className: "px-4 py-5 bg-white sm:p-6"
+  }, react_1["default"].createElement("div", {
+    className: "grid grid-cols-6 gap-6"
+  }, react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    defaultValue: values.gender,
+    id: "gender",
+    label: "Indica tu g\xE9nero",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Femenino"), react_1["default"].createElement("option", null, "Masculino"), react_1["default"].createElement("option", null, "No binario"), react_1["default"].createElement("option", null, "Transg\xE9nero"), react_1["default"].createElement("option", null, "Intersexualidad"), react_1["default"].createElement("option", null, "Prefiero no decirlo"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    defaultValue: values.age,
+    id: "age",
+    label: "Indica tu edad",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Menor 15 a\xF1os"), react_1["default"].createElement("option", null, "15-20 a\xF1os"), react_1["default"].createElement("option", null, "20-25 a\xF1os"), react_1["default"].createElement("option", null, "M\xE1s de 25 a\xF1os"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    defaultValue: values.continent,
+    id: "continent",
+    label: "\xBFD\xF3nde resides?",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Europa"), react_1["default"].createElement("option", null, "\xC1frica"), react_1["default"].createElement("option", null, "Am\xE9rica"), react_1["default"].createElement("option", null, "Asia"), react_1["default"].createElement("option", null, "Ocean\xEDa"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    defaultValue: values.often_play,
+    id: "often_play",
+    label: "\xBFQu\xE9 tan seguido juegas videojuegos?",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Diario"), react_1["default"].createElement("option", null, "2-3 veces en la semana"), react_1["default"].createElement("option", null, "1 vez en la semana"), react_1["default"].createElement("option", null, "Nunca"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    defaultValue: values.acquire_games,
+    id: "acquire_games",
+    label: "\xBFC\xF3mo prefieres adquirir tus juegos?",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Descargas"), react_1["default"].createElement("option", null, "Adquirir nuevo"), react_1["default"].createElement("option", null, "Adquirir seminuevo"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    defaultValue: values.price,
+    id: "price",
+    label: "\xBFCu\xE1nto gastas al a\xF1o en juegos? (D\xF3lares)",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "0-20 d\xF3lares"), react_1["default"].createElement("option", null, "20-50 d\xF3lares"), react_1["default"].createElement("option", null, "50-100 d\xF3lares"), react_1["default"].createElement("option", null, "M\xE1s 100 d\xF3lares"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    defaultValue: values.platform,
+    id: "platform",
+    label: "\xBFEn qu\xE9 plataforma juegas m\xE1s?",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Consola"), react_1["default"].createElement("option", null, "M\xF3vil"), react_1["default"].createElement("option", null, "PC"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    defaultValue: values.company,
+    id: "company",
+    label: "Compa\xF1\xEDa preferente",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Sony"), react_1["default"].createElement("option", null, "Microsoft"), react_1["default"].createElement("option", null, "Nintendo"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    defaultValue: values.console,
+    id: "console",
+    label: "Consola preferida",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Xbox Series X"), react_1["default"].createElement("option", null, "PlayStation 5"), react_1["default"].createElement("option", null, "Nintendo Switch"), react_1["default"].createElement("option", null, "PlayStation 4"), react_1["default"].createElement("option", null, "Xbox One"));
+    }
+  }), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    defaultValue: values.prefer_play,
+    id: "prefer_play",
+    label: "\xBFC\xF3mo prefieres jugar?",
+    span: true,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Solo"), react_1["default"].createElement("option", null, "Con personas"));
+    }
+  }), react_1["default"].createElement("label", {
+    className: "col-span-6 block text-sm font-medium text-gray-700"
+  }, "\xBFQu\xE9 tipo de g\xE9neros juegas?"), react_1["default"].createElement("div", {
+    className: "col-span-6 grid grid-cols-5 gap-5"
+  }, react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.adventure,
+    id: "adventure",
+    title: "Aventura"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.action,
+    id: "action",
+    title: "Acci\xF3n"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.arcade,
+    id: "arcade",
+    title: "Arcade"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.logic,
+    id: "logic",
+    title: "L\xF3gica"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.mmorpg,
+    id: "mmorpg",
+    title: "MMORPG"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.rpg,
+    id: "rpg",
+    title: "RPG"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.simulator,
+    id: "simulator",
+    title: "Simuladores"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.sports,
+    id: "sports",
+    title: "Deportes"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.strategy,
+    id: "strategy",
+    title: "Estrategia"
+  }), react_1["default"].createElement(Checkbox_1["default"], {
+    onChange: handleChange,
+    defaultValue: values.competitive,
+    id: "competitive",
+    title: "Competitivos"
+  })), react_1["default"].createElement(Select_1["default"], {
+    onChange: function onChange(value) {
+      return handleChangeSelect(value);
+    },
+    defaultValue: values.most_anticipated,
+    id: "most_anticipated",
+    label: "Juego que m\xE1s esperas para el 2022",
+    span: false,
+    renderOptions: function renderOptions() {
+      return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("option", null, "Elden Ring"), react_1["default"].createElement("option", null, "Rainbow Six: Extraction"), react_1["default"].createElement("option", null, "Pokemon Legends: Arceus"), react_1["default"].createElement("option", null, "Dying Light 2: Stay Human"), react_1["default"].createElement("option", null, "Horizon Forbidden West"), react_1["default"].createElement("option", null, "Gran Turismo 7"), react_1["default"].createElement("option", null, "Forspoken"), react_1["default"].createElement("option", null, "The Day Before"), react_1["default"].createElement("option", null, "Bayonetta 3"), react_1["default"].createElement("option", null, "Ghostwire: Tokyo"), react_1["default"].createElement("option", null, "Kirby and the Forgotten Land"), react_1["default"].createElement("option", null, "Gotham Knights"));
+    }
+  }), react_1["default"].createElement("div", {
+    className: "col-span-6"
+  }, react_1["default"].createElement("label", {
+    htmlFor: "favorite_game",
+    className: "block text-sm font-medium text-gray-700"
+  }, "Videojuego favorito"), react_1["default"].createElement("input", {
+    onChange: handleChange,
+    defaultValue: values.favorite_game,
+    type: "text",
+    name: "favorite_game",
+    id: "favorite_game",
+    className: "mt-1 focus:ring-sky-500 focus:border-sky-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+  })))), react_1["default"].createElement("div", {
+    className: "px-4 py-3 bg-gray-50 text-right sm:px-6"
+  }, react_1["default"].createElement("button", {
+    disabled: showLoader,
+    type: "submit",
+    className: "inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
+  }, "Actualizar"))))), showLoader && react_1["default"].createElement(Spinner_1["default"], null)), react_1["default"].createElement("div", {
+    className: "hidden sm:block",
+    "aria-hidden": "true"
+  }, react_1["default"].createElement("div", {
+    className: "py-5"
+  }, react_1["default"].createElement("div", {
+    className: "border-t border-gray-200"
+  }))));
+};
+
+exports["default"] = SurveyFormEdit;
 
 /***/ }),
 
@@ -7729,9 +8300,9 @@ function Welcome(_a) {
   return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement(inertia_react_2.Head, {
     title: "Bienvenido"
   }), react_1["default"].createElement("div", {
-    className: "flex flex-wrap md items-center h-screen"
+    className: "flex flex-wrap md items-center h-screen bg-gray-100"
   }, react_1["default"].createElement("div", {
-    className: "bg-white w-full md:w-1/2 h-screen"
+    className: "bg-gray-100 w-full md:w-1/2 h-screen"
   }, react_1["default"].createElement("div", {
     className: "mx-32"
   }, react_1["default"].createElement("h1", {
@@ -7741,35 +8312,41 @@ function Welcome(_a) {
   }, react_1["default"].createElement("div", {
     className: "pr-4"
   }, react_1["default"].createElement("p", {
-    className: "text-4xl text-gray-900 font-semibold pt-2"
+    className: "text-4xl text-sky-400 font-semibold pt-2"
   }, react_1["default"].createElement("i", {
     className: "fa-brands fa-laravel"
   }))), react_1["default"].createElement("div", {
     className: "pr-4"
   }, react_1["default"].createElement("p", {
-    className: "text-4xl text-gray-900 font-semibold pt-2"
+    className: "text-4xl text-sky-400 font-semibold pt-2"
   }, react_1["default"].createElement("i", {
     className: "fa-brands fa-react"
   }))), react_1["default"].createElement("div", {
-    className: "pr-4"
-  }, react_1["default"].createElement("p", {
-    className: "text-4xl text-gray-900 font-semibold pt-2"
-  }, react_1["default"].createElement("i", {
-    className: "fa-brands fa-react"
-  })))), react_1["default"].createElement("div", {
+    className: "pr-4 flex items-center"
+  }, react_1["default"].createElement("img", {
+    title: "tailwindcss",
+    src: "https://tailwindcss.com/_next/static/media/tailwindcss-mark.79614a5f61617ba49a0891494521226b.svg",
+    className: "h-8 w-8"
+  }))), react_1["default"].createElement("div", {
     className: "w-full sm: md:w-2/3 mt-16 text-gray-500 text-sm text-justify"
   }, "Peque\xF1a encuesta para recopilar informaci\xF3n general de los jugadores, el repositorio se encuentra en el siguiente enlace:", ' ', react_1["default"].createElement("a", {
-    href: "https://github.com/MiguelDIslas"
+    href: "https://github.com/MiguelDIslas/Laravel-React-Survey",
+    target: "_blank",
+    rel: "noopener noreferrer"
   }, react_1["default"].createElement("u", null, "Repositorio")), ". La imagen de inicio fue tomada de Unsplash, usuario", ' ', react_1["default"].createElement("strong", null, "Florian Olivo"), ", enlace de la fotograf\xEDa:", ' ', react_1["default"].createElement("a", {
-    href: "https://unsplash.com/photos/Mf23RF8xArY"
-  }, react_1["default"].createElement("u", null, "Fotograf\xEDa")), ".", react_1["default"].createElement("br", null), react_1["default"].createElement("br", null), "Email: adminlaravel@gmail.com", react_1["default"].createElement("br", null), "Password: 12345678"), react_1["default"].createElement("div", {
+    href: "https://unsplash.com/photos/Mf23RF8xArY",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, react_1["default"].createElement("u", null, "Fotograf\xEDa"), "."), react_1["default"].createElement("p", {
+    className: "mt-4"
+  }, "En un futuro se agregar\xE1 un usuario administrador para revisar los resultados de las encuestas.")), react_1["default"].createElement("div", {
     className: "mt-16 sm:mt-8 sm:flex sm:justify-center lg:justify-start "
   }, canLogin ? react_1["default"].createElement(react_1["default"].Fragment, null, page.props.user ? react_1["default"].createElement("div", {
     className: "rounded-md shadow"
   }, react_1["default"].createElement(inertia_react_1.InertiaLink, {
     href: route('dashboard'),
     className: "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-sky-600 hover:bg-sky-700 md:py-4 md:text-lg md:px-10"
-  }, "Dashboard")) : react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("div", {
+  }, "Tablero")) : react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("div", {
     className: "rounded-md shadow"
   }, react_1["default"].createElement(inertia_react_1.InertiaLink, {
     href: route('login'),
@@ -7857,6 +8434,191 @@ var appName = ((_a = window.document.getElementsByTagName('title')[0]) === null 
 progress_1.InertiaProgress.init({
   color: '#4B5563'
 });
+
+/***/ }),
+
+/***/ "./resources/js/components/Checkbox/index.tsx":
+/*!****************************************************!*\
+  !*** ./resources/js/components/Checkbox/index.tsx ***!
+  \****************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var Checkbox = function Checkbox(_a) {
+  var id = _a.id,
+      title = _a.title,
+      onChange = _a.onChange,
+      defaultValue = _a.defaultValue;
+  return react_1["default"].createElement("div", {
+    className: "flex items-start"
+  }, react_1["default"].createElement("div", {
+    className: "flex items-center h-5"
+  }, react_1["default"].createElement("input", {
+    id: id,
+    name: id,
+    checked: defaultValue == 1 ? true : false,
+    type: "checkbox",
+    className: "focus:ring-sky-500 h-4 w-4 text-sky-600 border-gray-300 rounded",
+    onChange: onChange
+  })), react_1["default"].createElement("div", {
+    className: "ml-3 text-sm"
+  }, react_1["default"].createElement("label", {
+    htmlFor: id,
+    className: "font-medium text-gray-700"
+  }, title)));
+};
+
+exports["default"] = Checkbox;
+
+/***/ }),
+
+/***/ "./resources/js/components/Message/index.tsx":
+/*!***************************************************!*\
+  !*** ./resources/js/components/Message/index.tsx ***!
+  \***************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var MessageComponent = function MessageComponent(_a) {
+  var message = _a.message;
+  return react_1["default"].createElement("div", {
+    className: "max-w-7xl mx-auto sm:px-6 lg:px-8 flex justify-center items-center"
+  }, react_1["default"].createElement("div", {
+    className: "max-w-md px-8 bg-white shadow-lg rounded-lg my-20"
+  }, react_1["default"].createElement("div", {
+    className: "py-4"
+  }, react_1["default"].createElement("div", {
+    className: "flex justify-center md:justify-end -mt-16"
+  }, react_1["default"].createElement("img", {
+    title: "photo",
+    className: "w-20 h-20 object-cover rounded-full border-2 border-gray-800",
+    src: "https://images.unsplash.com/photo-1550041443-2d8b512e921e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1965&q=80"
+  })), react_1["default"].createElement("div", null, react_1["default"].createElement("h2", {
+    className: "text-gray-800 text-3xl font-semibold text-justify"
+  }, "Mensaje"), react_1["default"].createElement("p", {
+    className: "mt-2 text-gray-600"
+  }, message)), react_1["default"].createElement("div", {
+    className: "flex justify-end mt-4"
+  }, react_1["default"].createElement("p", {
+    className: "text-xl font-medium text-gray-800"
+  }, "M.D.")))));
+};
+
+exports["default"] = MessageComponent;
+
+/***/ }),
+
+/***/ "./resources/js/components/Select/index.tsx":
+/*!**************************************************!*\
+  !*** ./resources/js/components/Select/index.tsx ***!
+  \**************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var classnames_1 = __importDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
+
+var SelectComponent = function SelectComponent(_a) {
+  var id = _a.id,
+      label = _a.label,
+      renderOptions = _a.renderOptions,
+      onChange = _a.onChange,
+      defaultValue = _a.defaultValue,
+      span = _a.span;
+  return react_1["default"].createElement("div", {
+    className: (0, classnames_1["default"])(span ? 'sm:col-span-3' : '', 'col-span-6')
+  }, react_1["default"].createElement("label", {
+    htmlFor: id,
+    className: "block text-sm font-medium text-gray-700"
+  }, label), react_1["default"].createElement("select", {
+    required: true,
+    onChange: onChange,
+    id: id,
+    name: id,
+    defaultValue: defaultValue,
+    className: "mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm"
+  }, react_1["default"].createElement("option", {
+    selected: true,
+    disabled: true
+  }, "Selecciona una opci\xF3n"), renderOptions()));
+};
+
+exports["default"] = SelectComponent;
+
+/***/ }),
+
+/***/ "./resources/js/components/Spinner/index.tsx":
+/*!***************************************************!*\
+  !*** ./resources/js/components/Spinner/index.tsx ***!
+  \***************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var Spinner = function Spinner() {
+  return react_1["default"].createElement("div", {
+    className: "flex justify-center items-center mt-4"
+  }, react_1["default"].createElement("div", {
+    className: "spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full",
+    role: "status"
+  }));
+};
+
+exports["default"] = Spinner;
 
 /***/ }),
 
@@ -59891,6 +60653,8 @@ var map = {
 	"./Dashboard.tsx": "./resources/js/Pages/Dashboard.tsx",
 	"./PrivacyPolicy.tsx": "./resources/js/Pages/PrivacyPolicy.tsx",
 	"./Profile/Show.tsx": "./resources/js/Pages/Profile/Show.tsx",
+	"./Survey/Create/index.tsx": "./resources/js/Pages/Survey/Create/index.tsx",
+	"./Survey/Edit/index.tsx": "./resources/js/Pages/Survey/Edit/index.tsx",
 	"./TermsOfService.tsx": "./resources/js/Pages/TermsOfService.tsx",
 	"./Welcome.tsx": "./resources/js/Pages/Welcome.tsx"
 };

@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Inertia\Inertia;
 use App\Models\Survey;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Redirect;
 
 class SurveyController extends Controller
 {
@@ -24,7 +27,7 @@ class SurveyController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('Survey/Create/index');
     }
 
     /**
@@ -35,7 +38,24 @@ class SurveyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(
+            [
+                'gender' => 'required',
+                'age' => 'required',
+                'continent' => 'required',
+                'often_play' => 'required',
+                'acquire_games' => 'required',
+                'price' => 'required',
+                'platform' => 'required',
+                'company' => 'required',
+                'console' => 'required',
+                'prefer_play' => 'required',
+                'most_anticipated' => 'required',
+            ]
+        );
+
+        Survey::create($request->all());
+        return Redirect::route('dashboard');
     }
 
     /**
@@ -46,7 +66,6 @@ class SurveyController extends Controller
      */
     public function show(Survey $survey)
     {
-        //
     }
 
     /**
@@ -57,7 +76,7 @@ class SurveyController extends Controller
      */
     public function edit(Survey $survey)
     {
-        //
+        return Inertia::render('Survey/Edit/index', ['survey' => $survey]);
     }
 
     /**
@@ -69,7 +88,8 @@ class SurveyController extends Controller
      */
     public function update(Request $request, Survey $survey)
     {
-        //
+        $survey->update($request->all());
+        return Redirect::route('dashboard');
     }
 
     /**
@@ -81,5 +101,14 @@ class SurveyController extends Controller
     public function destroy(Survey $survey)
     {
         //
+    }
+
+    public function verified(int $user)
+    {
+        $survey = Survey::where('user_id', $user)->get()->first();
+
+        return is_null($survey)
+            ? redirect()->route('survey.create')
+            : redirect()->route('survey.edit', ['survey' => $survey]);
     }
 }

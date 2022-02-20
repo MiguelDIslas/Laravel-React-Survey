@@ -78,19 +78,19 @@ export default function UpdateProfileInformationForm({ user }: Props) {
   return (
     <JetFormSection
       onSubmit={updateProfileInformation}
-      title={'Profile Information'}
-      description={`Update your account's profile information and email address.`}
+      title={'Información del perfil'}
+      description={`Este formulario permite actualizar el nombre y correo electrónico del usuario.`}
       renderActions={() => (
         <>
           <JetActionMessage on={form.recentlySuccessful} className="mr-3">
-            Saved.
+            Guardado.
           </JetActionMessage>
 
           <JetButton
             className={classNames({ 'opacity-25': form.processing })}
             disabled={form.processing}
           >
-            Save
+            Guardar
           </JetButton>
         </>
       )}
@@ -156,7 +156,7 @@ export default function UpdateProfileInformationForm({ user }: Props) {
 
       {/* <!-- Name --> */}
       <div className="col-span-6 sm:col-span-4">
-        <JetLabel htmlFor="name" value="Name" />
+        <JetLabel htmlFor="name" value="Nombre" />
         <JetInput
           id="name"
           type="text"
@@ -170,7 +170,7 @@ export default function UpdateProfileInformationForm({ user }: Props) {
 
       {/* <!-- Email --> */}
       <div className="col-span-6 sm:col-span-4">
-        <JetLabel htmlFor="email" value="Email" />
+        <JetLabel htmlFor="email" value="Correo Electrónico" />
         <JetInput
           id="email"
           type="email"

@@ -48,7 +48,7 @@ export default function AppLayout({
     email: page.props.user.email,
     imageUrl: page.props.user.profile_photo_url,
   };
-  
+
   const navigation = [
     {
       name: 'Tablero',
@@ -58,9 +58,10 @@ export default function AppLayout({
     },
     {
       name: 'Encuesta',
-      href: '#',
+      href: route('survey.verified', {user: page.props.user.id}),
       current: false,
-      active: route().current('dashboard'),
+      active:
+        route().current('survey.create') || route().current('survey.edit'),
     },
     {
       name: 'Perfil',
@@ -97,11 +98,7 @@ export default function AppLayout({
                   <div className="flex items-center">
                     <div className="flex-shrink-0">
                       <InertiaLink href={route('dashboard')}>
-                        <img
-                          className="h-8 w-8"
-                          src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                          alt="Workflow"
-                        />
+                        <i className="fa-brands fa-laravel text-white text-4xl"></i>
                       </InertiaLink>
                     </div>
                     <div className="hidden md:block">
@@ -149,13 +146,13 @@ export default function AppLayout({
                                 href={route('profile.show')}
                                 active={route().current('profile.show')}
                               >
-                                Profile
+                                Perfil
                               </JetResponsiveNavLink>
                             </Menu.Item>
                             <Menu.Item key="2">
                               <form method="POST" onSubmit={logout}>
                                 <JetResponsiveNavLink as="button">
-                                  Log Out
+                                  Cerrar sesión
                                 </JetResponsiveNavLink>
                               </form>
                             </Menu.Item>
@@ -236,18 +233,25 @@ export default function AppLayout({
           )}
         </Disclosure>
 
-        <header className="bg-white shadow">
-          <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
-          </div>
-        </header>
+        {renderHeader ? (
+          <header className="bg-white shadow">
+            <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+              {renderHeader()}
+            </div>
+          </header>
+        ) : null}
         <main>
-          <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-            {/* Replace with your content */}
+          <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 min-h-screen flex flex-col justify-center items-center">
             {children}
-            {/* /End replace */}
           </div>
         </main>
+        <footer>
+          <div className="py-5 bg-gray-800">
+            <div className="text-center text-lg text-white bg-gray-800">
+              <span>@2022</span>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );

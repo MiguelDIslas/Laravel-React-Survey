@@ -11,6 +11,7 @@ import JetInput from '@/Jetstream/Input';
 import JetLabel from '@/Jetstream/Label';
 import JetValidationErrors from '@/Jetstream/ValidationErrors';
 
+
 export default function Register() {
   const page = useTypedPage();
   const route = useRoute();

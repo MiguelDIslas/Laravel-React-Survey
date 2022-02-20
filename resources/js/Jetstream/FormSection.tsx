@@ -40,11 +40,11 @@ export default function JetFormSection({
             <div className="grid grid-cols-6 gap-6">{children}</div>
           </div>
 
-          {/* {hasActions && (
+          {hasActions && (
             <div className="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6 shadow sm:rounded-bl-md sm:rounded-br-md">
               {renderActions?.()}
             </div>
-          )} */}
+          )}
         </form>
       </div>
     </div>

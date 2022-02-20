@@ -24,46 +24,54 @@ export default function Welcome({
   return (
     <>
       <Head title="Bienvenido" />
-      <div className="flex flex-wrap md items-center h-screen">
-        <div className="bg-white w-full md:w-1/2 h-screen">
+      <div className="flex flex-wrap md items-center h-screen bg-gray-100">
+        <div className="bg-gray-100 w-full md:w-1/2 h-screen">
           <div className="mx-32">
             <h1 className="text-6xl font-bold mt-16">Gaming Survey</h1>
 
             <div className="flex mt-16 font-light text-gray-500">
               <div className="pr-4">
-                <p className="text-4xl text-gray-900 font-semibold pt-2">
+                <p className="text-4xl text-sky-400 font-semibold pt-2">
                   <i className="fa-brands fa-laravel"></i>
                 </p>
               </div>
               <div className="pr-4">
-                <p className="text-4xl text-gray-900 font-semibold pt-2">
+                <p className="text-4xl text-sky-400 font-semibold pt-2">
                   <i className="fa-brands fa-react"></i>
                 </p>
               </div>
-              <div className="pr-4">
-                <p className="text-4xl text-gray-900 font-semibold pt-2">
-                  <i className="fa-brands fa-react"></i>
-                </p>
+              <div className="pr-4 flex items-center">
+                <img
+                  title="tailwindcss"
+                  src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.79614a5f61617ba49a0891494521226b.svg"
+                  className="h-8 w-8"
+                />
               </div>
             </div>
 
             <div className="w-full sm: md:w-2/3 mt-16 text-gray-500 text-sm text-justify">
               Pequeña encuesta para recopilar información general de los
               jugadores, el repositorio se encuentra en el siguiente enlace:{' '}
-              <a href="https://github.com/MiguelDIslas">
+              <a
+                href="https://github.com/MiguelDIslas/Laravel-React-Survey"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <u>Repositorio</u>
               </a>
               . La imagen de inicio fue tomada de Unsplash, usuario{' '}
               <strong>Florian Olivo</strong>, enlace de la fotografía:{' '}
-              <a href="https://unsplash.com/photos/Mf23RF8xArY">
-                <u>Fotografía</u>
+              <a
+                href="https://unsplash.com/photos/Mf23RF8xArY"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <u>Fotografía</u>.
               </a>
-              .
-              <br />
-              <br />
-              Email: adminlaravel@gmail.com
-              <br />
-              Password: 12345678
+              <p className="mt-4">
+                En un futuro se agregará un usuario administrador para revisar
+                los resultados de las encuestas.
+              </p>
             </div>
 
             <div className="mt-16 sm:mt-8 sm:flex sm:justify-center lg:justify-start ">
@@ -75,7 +83,7 @@ export default function Welcome({
                         href={route('dashboard')}
                         className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-sky-600 hover:bg-sky-700 md:py-4 md:text-lg md:px-10"
                       >
-                        Dashboard
+                        Tablero
                       </InertiaLink>
                     </div>
                   ) : (

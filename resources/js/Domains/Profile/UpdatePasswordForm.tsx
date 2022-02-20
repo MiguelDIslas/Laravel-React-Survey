@@ -41,27 +41,27 @@ export default function UpdatePasswordForm() {
   return (
     <JetFormSection
       onSubmit={updatePassword}
-      title={'Update Password'}
+      title={'Actualizar contraseña'}
       description={
-        'Ensure your account is using a long, random password to stay secure.'
+        'Asegúrate de tener un contraseña extensa para proteger tu cuenta.'
       }
       renderActions={() => (
         <>
           <JetActionMessage on={form.recentlySuccessful} className="mr-3">
-            Saved.
+            Guardado.
           </JetActionMessage>
 
           <JetButton
             className={classNames({ 'opacity-25': form.processing })}
             disabled={form.processing}
           >
-            Save
+            Guardar
           </JetButton>
         </>
       )}
     >
       <div className="col-span-6 sm:col-span-4">
-        <JetLabel htmlFor="current_password">Current Password</JetLabel>
+        <JetLabel htmlFor="current_password" value="Contraseña actual" />
         <JetInput
           id="current_password"
           type="password"
@@ -80,7 +80,7 @@ export default function UpdatePasswordForm() {
       </div>
 
       <div className="col-span-6 sm:col-span-4">
-        <JetLabel htmlFor="password">New Password</JetLabel>
+        <JetLabel htmlFor="password" value="Nueva contraseña" />
         <JetInput
           id="password"
           type="password"
@@ -94,7 +94,7 @@ export default function UpdatePasswordForm() {
       </div>
 
       <div className="col-span-6 sm:col-span-4">
-        <JetLabel htmlFor="password_confirmation">Confirm Password</JetLabel>
+        <JetLabel htmlFor="password_confirmation" value="Confirmar contraseña" />
         <JetInput
           id="password_confirmation"
           type="password"
